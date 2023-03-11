@@ -44,6 +44,10 @@ class GifsFragment:Fragment(), GifsAdapter.OnGifClickListener {
         setupRecyclerView()
         observeGifs()
         listenAdapter()
+        createMenu()
+    }
+
+    private fun createMenu() {
         val menuHost: MenuHost = requireActivity()
         menuHost.addMenuProvider(object : MenuProvider {
             override fun onCreateMenu(menu: Menu, menuInflater: MenuInflater) {
@@ -94,7 +98,6 @@ class GifsFragment:Fragment(), GifsAdapter.OnGifClickListener {
         viewmodel.gifs.observe(viewLifecycleOwner){
             gifsAdapter.submitData(viewLifecycleOwner.lifecycle, it)
             binding.recyclerView.isVisible=true
-            //binding.txtErrorOrEmpty.isVisible=gifsAdapter.snapshot().isEmpty()
         }
     }
 

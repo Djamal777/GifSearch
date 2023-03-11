@@ -3,4 +3,6 @@
     <string name="connection_problem">Не удалось загрузить гифки( Проверьте интернет-подключение</string>
     <string name="search">search</string>
     <string name="empty">По вашему запросу гифок не найдено(</string>
+    <string name="share">share</string>
+    <string name="download">download</string>
 </resources>
